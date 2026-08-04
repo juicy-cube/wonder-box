@@ -12,5 +12,7 @@ All the code was written using the free version of Claude AI (Sonnet).
 
 You can use this package to create other NSF compilations, which I encourage you to do :)
 
-==
-AceMan
+— AceMan
+
+==== CHANGELOG
+2026.07: v1.0 Initial release
