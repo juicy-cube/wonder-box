@@ -1,0 +1,95 @@
+# EZNSF album description file
+
+# You can now list MORE THAN ONE "NSF" line. Every TRACK line belongs to
+# whichever NSF line came before it, so tracks are grouped per NSF file.
+# All tracks from all NSF files show up together in one combined track menu.
+#
+# NOTE: multiple NSF files only works with NROM 0 (mapper 31 / bankswitched
+# build). NROM 1 only supports a single NSF file.
+
+NROM 0
+
+TITLE Wonder Box
+ARTIST AceMan
+COPYRIGHT v1.0, 07.2026
+
+# text of the "play everything in a loop" entry at the top of the main menu and the info section
+
+PLAYALL // PLAY ALL
+INFOTEXT // INFO
+
+# each TRACK has:
+# time: either as a "minutes:seconds" or just "seconds" number
+# song: the original number of the song in the NSF (of the NSF listed above it)
+# title: after the song number the rest of the line is a title for the track
+
+NSF _pipe.nsf
+TRACK 05:20 1 Strawberry Pipe Ride
+
+NSF _goomba.nsf
+TRACK 02:37 1 Goombastic!
+
+NSF _dose.nsf
+TRACK 02:54 1 Nintendose
+
+NSF _balls.nsf
+TRACK 03:16 1 Balls on Fire
+
+NSF _demo.nsf
+TRACK 01:43 1 Reincarnated as Demoscener
+
+NSF _kissu.nsf
+TRACK 02:13 1 Firsto Kissu
+
+NSF _peach.nsf
+TRACK 03:24 1 Split My Peach Up
+
+NSF _yoshi.nsf
+TRACK 03:13 1 Yoshi-Mitsu
+
+# text for the info screen
+
+INFO This production was
+INFO made using EZNSF
+INFO music ROM tool,
+INFO by Brad Smith, 2016.
+INFO
+INFO Modified to support
+INFO multiple NSFs
+INFO by AceMan in 2026
+INFO using Claude AI model
+INFO
+INFO A/START - Play/Toggle Loop
+INFO B - Cancel (Back)
+INFO START - Pause
+
+# each SCREEN has:
+# 1k nametable + attributes
+# 4k background tiles (nametable)
+# 4k foreground tiles (sprites)
+# 16b background palette
+# 16b foreground palette
+
+SCREEN INFO   wonderbox.nam   tiles.chr tiles.chr colors.pal colors.pal
+SCREEN TRACKS wonderbox.nam tiles.chr tiles.chr colors.pal colors.pal
+SCREEN PLAY   wonderbox.nam   tiles.chr tiles.chr colors.pal colors.pal
+
+COORD INFO              2 2      # subsequent lines start below this point
+
+COORD TRACKS_TITLE      2 2
+COORD TRACKS_ARTIST     2 3
+COORD TRACKS_COPYRIGHT  2 4
+COORD TRACKS_TRACK      4 6      # subsequent tracks on each line
+
+COORD PLAY_TRACK        2 20     # tile position of track name
+COORD PLAY_TIME         16 170   # pixel position of time indicator
+
+# sprite tiles used
+
+CONST SPRITE_CHOOSE 4
+CONST SPRITE_PLAY 8
+CONST SPRITE_PLAY_ALL 4
+CONST SPRITE_PAUSE 6
+CONST SPRITE_STOP 7
+CONST SPRITE_ZERO 48
+CONST SPRITE_COLON 58
